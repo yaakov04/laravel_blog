@@ -18,6 +18,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::resource('posts', 'Backend\PostController')
+    ->middleware('auth')
+    ->except('show');
+
 
 
 /*
@@ -32,6 +36,8 @@ Route::get('/home', 'HomeController@index')->name('home');
  * Configurar el controlador
  * 
  * Configurar las vistas
+ * 
+ * Para configurar un area de administracion lo haces creando el controlador con << php artisan make:controller Backend/PostController --resource --model=NombreModelo >>
 */
 
 
