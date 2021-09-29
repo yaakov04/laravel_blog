@@ -8,6 +8,13 @@
 
             <div class="card">
                 <div class="card-body">
+                    @if($post->imagen)
+                        <img class="card-img-top" src="{{ $post->get_image }}" alt="">
+                    @elseif($post->iframe)
+                        <div class="embed-responsive embed-responsive-16by9">
+                            {!! $post->iframe !!}
+                        </div>
+                    @endif
                    <h5 class="card-title">{{ $post->title }}</h5>
                    <p class="card-text">
                        {{ $post->body }}
