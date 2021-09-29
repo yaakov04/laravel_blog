@@ -8,12 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+
+    protected $fillable = [
+        'title', 'body', 'iframe', 'imagen', 'user_id'
+    ];
+
     use Sluggable;
      /**
      * Return the sluggable configuration array for this model.
      *
      * @return array
      */
+    
     public function sluggable(): array
     {
         return [
