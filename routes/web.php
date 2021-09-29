@@ -41,7 +41,7 @@ Route::resource('posts', 'Backend\PostController')
  * 
  * Para guardar un registro se crea un request con << php artisan make:request PostRequest >> y ahi se agrega la validacion, y se agrega esa clase en el controlador correspondiente
  * 
- * En el controlador se configura el metodo store (Tambien hay que configurar el fillable en el modelo o entidad)
+ * En el controlador se configura el metodo store/update/delete (Tambien hay que configurar el fillable en el modelo o entidad)
  * 
 */
 
